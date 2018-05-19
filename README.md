@@ -1,0 +1,1 @@
+provides a trait for converting things to tuples or arrays, tuples and arrays of course implement this trait. yeah it's probably UB the way I transmute tuples but, I don't care it's just a workaround until we can pattern match properly
