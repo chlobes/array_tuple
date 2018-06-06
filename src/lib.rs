@@ -1,6 +1,6 @@
 pub trait ArrayTuple {
-	type Array: ArrayTuple<Array=Self::Array,Tuple=Self::Tuple>;
-	type Tuple: ArrayTuple<Array=Self::Array,Tuple=Self::Tuple>;
+	type Array;
+	type Tuple;
 	fn into_array(self) -> Self::Array;
 	fn into_tuple(self) -> Self::Tuple;
 }
