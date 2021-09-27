@@ -1,5 +1,3 @@
-#![feature(nll)]
-
 pub trait ArrayTuple {
 	type Array;
 	type Tuple;
