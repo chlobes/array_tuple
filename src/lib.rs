@@ -1,8 +1,10 @@
-pub trait ArrayTuple {
-	type Array;
+pub trait ArrayTuple: Sized {
+	type Array: ArrayTuple<Tuple=Self::Tuple>;
 	type Tuple;
 	fn into_array(self) -> Self::Array;
-	fn into_tuple(self) -> Self::Tuple;
+	fn into_tuple(self) -> Self::Tuple {
+		self.into_array().into_tuple()
+	}
 }
 
 impl<T: ArrayTuple> ArrayTuple for Option<T> {
